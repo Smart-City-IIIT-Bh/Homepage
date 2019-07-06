@@ -19,6 +19,225 @@
      left: 0;
      bottom: 0;
      width: 100%;  
+
+     z-index: 10;
+    }
+    .top{
+      margin-top: 8%;
+      margin-left: 0%;
+      text-align: center;
+      animation: moveInLeft 1s ease-out;
+    }
+    @keyframes moveInLeft{
+      0%{
+        opacity: 0;
+        transform: translateX(-200px);
+      }
+      100%{
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .top h2{
+      text-transform: Uppercase;
+    }
+    .team-section {
+    
+      text-align: center;
+    }
+    .inner-width {
+      max-width: 100%;
+      margin: auto;
+      color: #333;
+      overflow: hidden;
+    }
+    .team-section h1 {
+      font-size: 1.8em;
+      text-transform: uppercase;
+      display: inline-block;
+      border-bottom: 4px solid;
+      padding-bottom: 10px;
+    }
+
+    .team-intro {
+      line-height: 1.6em;
+    }
+    .item-2{
+      height: 20rem;
+      width: 100%;
+      grid-area: display;
+      
+    }
+    .item-2 h3{
+      text-align: left;
+      margin-left: 4em;
+    }
+    .item-2 p{
+      text-align: left;
+      margin-left: 6em;
+      font-size: 20px;
+    }
+    .item-1{
+      grid-area: name;
+
+    }
+    .item-1 img{
+      float: left;
+      box-shadow: rgba(0,0,0,0.5)0px 0px 5px;
+    }
+    .responsive{
+      width: 160px;
+      height: auto;
+    }
+    
+    .teams .container{
+      display: grid;
+      margin-top: 40px;
+      grid-template-columns:30px 30px auto;
+      grid-template-rows:30px 30px auto;
+      grid-template-areas:
+        "name name ."
+        "name name ."
+        ".  .  display";
+    }
+
+    .teams{
+      margin-bottom: 5em;
+    }
+    
+
+
+
+  .our-team-main
+  {
+    width:100%;
+    height:auto;
+    border-bottom:5px #323233 solid;
+    background:#fff;
+    text-align:center;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+    transition:0.5s;
+    margin-bottom:28px;
+  }
+
+
+  .our-team-main img
+  {
+    border-radius:50%;
+    margin-bottom:20px;
+    width: 160px;
+  }
+
+  .our-team-main h3
+  {
+    font-size:20px;
+    font-weight:700;
+  }
+
+  .our-team-main p
+  {
+    margin-bottom:0;
+  }
+
+  .team-back
+  {
+    width:100%;
+    height:auto;
+    position:absolute;
+    top:0;
+    left:0;
+    padding:5px 15px 0 15px;
+    text-align:left;
+    background:#fff;
+    
+  }
+
+  .team-front
+  {
+    width:100%;
+    height:auto;
+    position:relative;
+    z-index: 2;
+    background:#9AF59B;
+    padding:15px;
+    bottom:0px;
+    transition: all 0.5s ease;
+  }
+
+  .our-team-main:hover .team-front
+  {
+    bottom:-300px;
+    transition: all 0.5s ease;
+  }
+
+  .our-team-main:hover
+  {
+    border-color:#777;
+    transition:0.5s;
+  }
+  .ateam{
+    margin-bottom: 20rem;
+  }
+
+  /*our-team-main*/
+
+
+    @media only screen and (max-width:640px){
+      .top{
+        margin-top:10%;
+      }
+      .responsive{
+        width: 130px;
+      }
+      .item-2 h3{
+        margin-left: 3em;
+      }
+      .item-2 p{
+      margin-left: 4.2em;
+    }
+    }
+    @media only screen and (max-width:540px){
+      .top{
+        margin-top:12%;
+      }
+      .responsive{
+        width: 120px;
+      }
+      .item-2 h3{
+        margin-left: 3em;
+      }
+    }
+    @media only screen and (max-width:440px){
+      .top{
+        margin-top:14%;
+      }
+      .responsive{
+        width: 120px;
+      }
+      .item-2 h3{
+        margin-left: 2.5em;
+      }
+      .item-2 p{
+        margin-left: 3.6em;
+      }
+    }
+    @media only screen and (max-width:360px){
+      .top{
+        margin-top:16%;
+      }
+      .responsive{
+        width: 100px;
+      }
+      .item-2 h3{
+        margin-left: 2em;
+      }
+      .item-2 p{
+        margin-left: 2.8em;
+        font-size: 19px;
+      }
+
     }
   </style>
 </head>
@@ -49,41 +268,111 @@
     </ul>
   </div>  
 </nav>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="row">
-<div class=" col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+
+<header class="top">
+  <div class="team-section">
+    <div class="inner-width">
+      <h1>Meet the IOT LAB Team</h1>
+    </div>
+  </div>
+</header>
+
+
+
+<section class="teams">
+    <h2 style="margin-left: 15px;">MENTOR :</h2>
+  <div class="container">
+    <div class="item-1"><img src="static/ssir.PNG" alt="Sir" class="responsive"></div>
+    <div class="item-2"><h3>Dr. Suraj Sharma</h3>
+      <p>Teaching Interests: Cryptography and Network Security, Sensor Networks, TOC, Compiler Design, DBMS, Object 
+        Oriented Programming. Research Interests Efficient and Secured Routing Protocols in Wireless Sensor Networks.
+        <br><br>
+        Assistant Professor Department of Computer Science and Engineering International Institute of Information 
+        Technology Bhubaneswar Odisha India–761003 Contact – +91-9861298939 E–mail id – suraj.atnitrkl@gmail.com
+      </p><img src="https://img.icons8.com/ios/50/000000/github-filled.png"  style="float: right;">
+    </div>
+  </div>
+ 
+</section>
+
+<section class="ateam">
+    <h2 style="margin-bottom: 60px;margin-left: 15px;">DEVELOPERS :</h2>
 <div class="container">
-<div class="spinner-border"></div>
-<h3 style="text-align: center;">Page under construction</h3>
+  <div class="row">
+    
+    <!--team-1-->
+    <div class="col-lg-4">
+      <div class="our-team-main">
+      
+        <div class="team-front">
+          <img src="static/member1.png" class="img-fluid" />
+          <h3>Arijeet Sathpathy</h3>
+          <p></p>
+        </div>
+        
+        <div class="team-back">
+          <span>
+              P4 Language , POX, ONOS , Software Defined Networks , Computer Networks ,Machine Learning , Computer Vision
+          </span>
+        </div>
+        
+      
+      </div>
+      <img src="https://img.icons8.com/ios/50/000000/github-filled.png"  style="float: right;">
+    </div>
+    <!--team-1-->
+        
+    <!--team-2-->
+    <div class="col-lg-4">
+      <div class="our-team-main">
+        
+          <div class="team-front">
+          <img src="static/member3.jpg" class="img-fluid" />
+          <h3>Tapaswin Padhy</h3>
+          <p></p>
+        </div>
+        
+        <div class="team-back">
+          <span>
+              A IoT developer, Block chain enthusiast. Undergrad Researcher | Open CV learner and just a
+               inquisitive kid to learn new things
+
+          </span>
+        </div>
+      
+      </div>
+      <img src="https://img.icons8.com/ios/50/000000/github-filled.png"  style="float: right;">
+    </div>
+    <!--team-2-->
+    <!--team-3-->
+    <div class="col-lg-4">
+      <div class="our-team-main">
+        
+          <div class="team-front">
+          <img src="static/member2.jpg" class="img-fluid" />
+          <h3>Debabrata Choudhary</h3>
+          <p></p>
+        </div>
+        
+        <div class="team-back">
+          <span>
+              DevOps | System Administration 
+          </span>
+        </div>
+      
+      </div>
+      <img src="https://img.icons8.com/ios/50/000000/github-filled.png"  style="float: right;">
+    </div>
+    <!--team-3-->
+      
+  </div>
 </div>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+</section>
+
+
+
 <footer class="container-fluid text-center">
   <br>
   <div class="row">
